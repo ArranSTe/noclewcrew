@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>No Clue Crew - Play</title>
+  <link rel="icon" type="image/png" href="/Images/GeoGuessr_Logo.webp"/>
+  <link rel="stylesheet" href="/Css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <h2>📍 No Clue Crew</h2>
+  <nav>
+    <a href="/Pages/Index.html">Home</a>
+    <a href="/Pages/game.html">Play</a>
+    <a href="/Pages/leaderboard.html">Leaderboard</a>
+    <a href="/Pages/rules.html">Rules</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h1>Today's Round 🔗</h1>
+    <p>Click below to play today’s challenge.</p>
+    <br>
+
+    <a id="playLink" href="#" target="_blank">
+      <button>Play Now</button>
+    </a>
+
+    <br><br>
+    <p>Theme: <b id="themeText">Loading...</b></p>
+  </div>
+</div>
+
+<script>
+  const challenges = [
+    { link: "https://www.geoguessr.com/challenge/nNETS6S1tUvEVXvP", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/rmKC0y982SPqUHNW", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/Rjx3YGwmTBRekIHI", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/gmI3VMBQcwtPDdDk", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/NtMLX3JtxAmmjLn4", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/CmF1px4KWTcCnw2m", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/Eq5oqdJ9j1wJtO4P", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/tqqM9QU6j3sOqeGa", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/r9NnE37VedliUh19", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/KGWt8asjaJp07WAV", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/Q2RpJqpo9DUgRRkC", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/ayBe4z8BnEt4SwjJ", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/Ev7mHevcrhCxF3hh", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/VsxKJCcTC1E4MlR9", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/cRLmLXbjUpB8nsRo", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/dKmHaPMzOxzz1oY3", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/HI7Umhv2nmkQywPB", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/xETKCGuAKlMfuKCl", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/vVUbNtQCBIeN5gmH", theme: "World 🌍" },
+    { link: "https://www.geoguessr.com/challenge/StZxz8lzlKOJzFQD", theme: "World 🌍" }
+  ];
+
+  const today = new Date();
+
+  const start = new Date(today.getFullYear(), 0, 0);
+  const diff = today - start;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor(diff / oneDay);
+
+  const index = dayOfYear % challenges.length;
+
+  document.getElementById("playLink").href = challenges[index].link;
+  document.getElementById("themeText").innerText = challenges[index].theme;
+</script>
+
+</body>
+</html>
