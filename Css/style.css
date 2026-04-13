@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    color: #038dff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #1e293b;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* CENTERED ADMIN */
+.center-box {
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* TITLES */
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* BUTTONS */
+button {
+    background: #038dff;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.danger {
+    background: #ef4444;
+}
+
+.big-btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+input.error {
+    border: 2px solid red;
+}
+
+input.error::placeholder {
+    color: red;
+}
+
+/* TABLE */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td, .table th {
+    padding: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* DUELS */
+.duel-header, .duel-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 15px;
+}
+
+.duel-row:hover {
+    background: #f1f5f9;
+}
+
+.duel-theme {
+    color: #038dff;
+    font-weight: bold;
+}
+
+.duel-btn.soon {
+    background: #94a3b8;
+}
