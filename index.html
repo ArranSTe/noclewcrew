@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Clue Crew - Home</title>
+    <link rel="icon" type="image/x-icon" href="/Images/Logo.png">
+
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+    <div class="logo">No Clue Crew</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="daily.html">Daily Game</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="duels.html">Duels</a>
+        <a href="admin.html">Admin</a>
+    </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<div class="container">
+
+    <div class="card center-box fade-up hero">
+
+        <h1>Welcome to No Clue Crew 🌍</h1>
+        <p>Play daily GeoGuessr challenges</p>
+
+        <!-- MAIN BUTTON -->
+        <button onclick="navigateTo('daily.html')">
+             Play Daily Game
+        </button>
+
+        <!-- SECONDARY BUTTON -->
+        <button onclick="toggleEmail()" style="margin-top:10px;">
+            Get Emails Daily
+        </button>
+
+        <!-- EMAIL BOX -->
+        <div id="emailBox" style="display:none; margin-top:15px;">
+            <input id="emailInput" placeholder="Enter your email">
+            <button onclick="saveEmail()">Confirm</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script type="module" src="JavaScript/script.js"></script>
+
+</body>
+</html>

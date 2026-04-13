@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Clue Crew - Admin</title>
+      <link rel="icon" type="image/x-icon" href="/images/Logo.png">
+
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+    <div class="logo">No Clue Crew</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="daily.html">Daily Game</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="duels.html">Duels</a>
+        <a href="admin.html">Admin</a>
+    </div>
+</nav>
+
+<!-- ================= ADMIN ================= -->
+<div class="admin-wrapper">
+    <div class="admin-box fade-up">
+
+        <h1>Admin Panel</h1>
+
+        <!-- LOGIN -->
+        <div class="card">
+            <h3>Login</h3>
+            <input id="pass" placeholder="Enter password" type="password">
+            <button onclick="login()">Enter</button>
+        </div>
+
+        <!-- PANEL -->
+        <div id="panel" style="display:none;">
+
+            <!-- LINKS -->
+            <div class="card">
+                <h2>Daily Links</h2>
+
+                <input id="newLink" placeholder="Enter GeoGuessr link">
+                <button onclick="addLink()">Add Link</button>
+
+                <div id="linksList"></div>
+            </div>
+
+            <!-- LEADERBOARD -->
+            <div class="card">
+                <h2>Leaderboard</h2>
+
+                <input id="pName" placeholder="Player name">
+                <button onclick="addPlayer()">Add Player</button>
+
+                <div id="leaderboardAdminList"></div>
+            </div>
+
+            <!-- DUELS -->
+            <div class="card">
+                <h2>Duels</h2>
+
+                <input id="dName" placeholder="Duel name">
+                <input id="dDate" type="date">
+                <input id="dTime" type="time">
+                <input id="dTheme" placeholder="Theme (World, Europe etc)">
+                
+                <button onclick="addDuel()">Add Duel</button>
+
+                <div id="duelAdminList"></div>
+            </div>
+
+            <!-- EMAILS -->
+            <div class="card">
+                <h2>Emails</h2>
+                <div id="emailList"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script type="module" src="JavaScript/script.js"></script>
+
+</body>
+</html>
